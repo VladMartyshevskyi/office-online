@@ -68,5 +68,13 @@ After installation installation of the addon you need to configure it properly i
 - `SECRET_KEY` for encrypting access token using AES algorithm. Will generated if not specified
 - `BRAND_NAME` is shown in the editor top bar. eXo Platform by default.
 
+Office Online should appear in editors admin page. Administrators can enable the editor for all users, or give access to specific users/groups.
+After that permitted users will be able to use the Office Online editor.
 
+## Multiple editors installed
+If multiple editors installed and enabled on the platform, users will see a dropdown with editing options instead of single editor button. 
 
+As we cannot sync changes in editors from different providers (OnlyOffice and Office Online for e.g), the cross-editor blocking helps to prevent data loss and ensure good user experience while using document editors.
+Cross-editor blocking is a function of ECMS, that blocks other editors from opening if the document is currently being edited in another provider.
+
+So when user opens the document in Office Online, no one can open it in Only Office and vice versa.
