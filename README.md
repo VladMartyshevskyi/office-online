@@ -7,8 +7,9 @@ In addition, users can edit documents collaboratively with other users using Off
 ## Usage
 
 After installation Office Online add-on new editing options should appear in the document preview and Explorer. Also, ‘New Document’ menu will be extended with Office templates for new documents.
-
-![Editor buttons](/docs/images/multiple-editors-pulldown.png)
+<p align="center">
+<img src="/docs/images/multiple-editors-pulldown.png" />
+</p>
 
 When user clicks ‘Edit in Office Online’ (or Edit) the document will be loaded in separate editor page. It could take a few seconds, depends on the file size.
 If user is not signed in Office 365 they will be redirected to the login page.
@@ -17,22 +18,24 @@ Once signed in, Office for the web will verify that the user has a valid Office 
 The document gets uploaded to temporary storage on Microsoft side, and the content displayed in the editor frame.
 
 While editing, the changes are saved to the MS storage, and periodically sync with eXo side. When the updated content is saved to eXo, users can see a yellow refresh banner on the document preview that allows to update the preview.
-
-![Refresh Banner](/docs/images/refresh-banner.png)
+<p align="center">
+<img src="/docs/images/refresh-banner.png" />
+</p>
 
 Each save to eXo creates a new version, except when the version accumulation went off.
 Autosave frequency and version owner depend on the document format. 
 Summary of co-authoring behavior for Office editors:
-
-![Save frequency](/docs/images/autosave-frequency.png)
+<p align="center">
+<img src="/docs/images/autosave-frequency.png" />
+</p>
 
 If the user doesn’t have permissions for editing document, it could be opened in view mode.
 Also, Office Online provides a way to create new documents, so users are able to create new documents based on templates provided in ‘New Document’ popup in Explorer.
 
 Office Online supports co-editing mode that allows multiple users to edit the same document simultaneously.
-
-![Co-Editing](/docs/images/coedit.png)
-
+<p align="center">
+<img src="/docs/images/coedit.png" />
+</p>
 
 ## Integration Schema
 We use Web Application Open Platform Interface (WOPI) protocol to integrate Office for the web with eXo Platform. The WOPI protocol enables Office for the web to access and change files that are stored in eXo.
@@ -42,8 +45,10 @@ Editing/viewing documents in Office Online typically consists of such steps:
 3. WOPI Client requests file info, file content from WOPI Host using the proxy.
 4. User edits the document in the editor frame, the data is tracked by WOPI client, and when the editing is finished or the editor is closed, WOPI client sends putFile request to WOPI Host (using Proxy) 
 5. The document is stored on eXo side. The diagram shows the schema of the integration Office Online with eXo Platform.
+<p align="center">
+<img src="/docs/images/integration-schema.png" />
+</p>
 
-![Integration Schema](/docs/images/integration-schema.png)
 Office for the web only makes WOPI requests to trusted partner domains. This domain list is called the WOPI domain allow list. The domain should be whitelisted. We’re using a proxy with allowed domain that redirects to eXo Plaform server (wopi endpoints).
 
 ## Installation & Configuration
@@ -86,14 +91,16 @@ As we cannot sync changes in editors from different providers (OnlyOffice and Of
 Cross-editor blocking is a function of ECMS, that blocks other editors from opening if the document is currently being edited in another provider.
 
 So when user opens the document in Office Online, no one can open it in Only Office and vice versa.
-
-![Blocked Editor](/docs/images/blocked-editor.png)
+<p align="center">
+<img src="/docs/images/blocked-editor.png" />
+</p>
 
 The administrators are able to manage installed editors on 'Editors Administration' page, that can be open from the platform navigation.
-
-![Editors Administration](/docs/images/editors-administration.png)
+<p align="center">
+<img src="/docs/images/editors-administration.png" />
+</p>
 
 There is a possibility to enable/disable editors and allow the editor for specific user or groups of users.
-
-![Editors Administration Configuration](/docs/images/editors-administration-permissions.png)
-
+<p align="center">
+<img src="/docs/images/editors-administration-permissions.png" />
+</p>
