@@ -7,6 +7,7 @@ In addition, users can edit documents collaboratively with other users using Off
 ## Usage
 
 After installation Office Online add-on new editing options should appear in the document preview and Explorer. Also, ‘New Document’ menu will be extended with Office templates for new documents.
+![Editor buttons](/docs/images/multiple-editors-pulldown.png)
 
 When user clicks ‘Edit in Office Online’ (or Edit) the document will be loaded in separate editor page. It could take a few seconds, depends on the file size.
 If user is not signed in Office 365 they will be redirected to the login page.
@@ -20,7 +21,7 @@ Each save to eXo creates a new version, except when the version accumulation wen
 Autosave frequency and version owner depend on the document format. 
 Summary of co-authoring behavior for Office editors:
 
-![Save frequency](/docs/images/save-frequency.png)
+![Save frequency](/docs/images/autosave-frequency.png)
 
 If the user doesn’t have permissions for editing document, it could be opened in view mode.
 Also, Office Online provides a way to create new documents, so users are able to create new documents based on templates provided in ‘New Document’ popup in Explorer.
